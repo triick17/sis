@@ -143,6 +143,8 @@ input:focus {
 
 .footer .menu-item {
 	list-style: none;
+    display: inline-block;
+    margin-right: 8px;
 }
 
 .footer  a {
@@ -201,6 +203,11 @@ h3.subtitle {
 	font-size: 16px;
 	display: inline-block;
 	font-style: italic;
+}
+
+.navbar-default {
+    /*box-shadow: 0 2px 3px rgba(0,0,0,0.2);*/
+    /*background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 88%,rgba(255,255,255,0) 100%);*/
 }
 
 .navbar-default .navbar-brand {
@@ -284,6 +291,7 @@ h3.subtitle {
 .work-entry {
     flex: 1 1 100%;
     margin-right: 16px;
+    margin-bottom: 16px;
 }
 
 .entry-writing {

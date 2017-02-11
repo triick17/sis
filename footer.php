@@ -11,7 +11,7 @@
 							?>
 						</div>
 						<div class="col-sm-4">
-							<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-3')) ?>
+
 						</div>
 						<div class="col-sm-4">
 							<?php
@@ -19,6 +19,7 @@
 								$sidebar = get_post(244); // insert ID of right Footer page
 								echo "<div class=''>" . apply_filters( 'the_content', $sidebar->post_content ) . "</div>";
 							?>
+							<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-3')) ?>
 						</div>
 					</div>
 
