@@ -4,7 +4,7 @@
 			<section class="">
 				<?php
 					// get the Frontpage
-					$current_page = get_post(776); // insert ID of Stage (Image)
+					$current_page = get_post(117); // insert ID of Stage (Image)
 					echo "<div class='hero'>" . apply_filters( 'the_content', $current_page->post_content ) . "</div>";
 				?>
 			</section>
@@ -25,7 +25,7 @@
 					// https://github.com/jchristopher/attachments
 					if(get_locale() == "en_US") {
 						// english attachment
-						$attachments = new Attachments( 'attachments', 921 );
+						$attachments = new Attachments( 'attachments', 148 );
 						if( $attachments->exist() ) :
 							while( $attachments->get() ) :
 								echo "<a class='btn btn-default' href='" . $attachments->url() . "'>Resume as pdf</a>";
@@ -34,7 +34,7 @@
 					}
 					else {
 						// german attachment
-						$attachments = new Attachments( 'attachments', 780 );
+						$attachments = new Attachments( 'attachments', 148 );
 						if( $attachments->exist() ) :
 							while( $attachments->get() ) :
 								echo "<a class='btn btn-default' href='" . $attachments->url() . "'>Lebenslauf als pdf</a>";
@@ -52,7 +52,7 @@
 					<div class="work-wrapper col-md-9">
 						<?php
 						// Heading for Film Section
-						$current_page = get_post(783);
+						$current_page = get_post(161);
 						echo "<h3>" . translate($current_page->post_title)  . "</h3>";
 						?>
 
@@ -72,7 +72,7 @@
 
 						<?php
 							// Heading for Theatre Section
-							$current_page = get_post(785);
+							$current_page = get_post(163);
 							echo "<h3>" . translate($current_page->post_title)  . "</h3>";
 						?>
 
@@ -94,7 +94,7 @@
 					<div class="sidebar sidebar-cv col-md-3">
 						<?php
 							// get the CV Sidebar
-							$sidebar = get_post(792); // insert ID of CV-sidebar here
+							$sidebar = get_post(89); // insert ID of CV-sidebar here
 							echo "<div class=''>" . apply_filters( 'the_content', $sidebar->post_content ) . "</div>";
 						?>
 					</div>
@@ -108,7 +108,7 @@
 
 				<?php
 					// get the Photos Page (only used for heading)
-					$current_page = get_post(790); // insert ID of photo-page here
+					$current_page = get_post(6); // insert ID of photo-page here
 				 	echo "<h2>" . translate($current_page->post_title) . "</h2>";
 			 	?>
 				<a href="" id="photos" class="nav-anchor visuallyhidden">Photos</a>
@@ -133,7 +133,7 @@
 					<div class="sidebar sidebar-photos col-sm-3">
 						<?php
 							// get the Photo Sidebar
-							$current_sidebar = get_post(794); // insert ID of photo-sidebar here
+							$current_sidebar = get_post(72); // insert ID of photo-sidebar here
 							echo apply_filters( 'the_content', $current_sidebar->post_content );
 						?>
 					</div>
@@ -170,7 +170,7 @@
 					<div class="sidebar sidebar-reels col-md-3">
 						<?php
 							// get the Reels Sidebar
-							$current_sidebar = get_post(796); // insert ID of reels-sidebar here
+							$current_sidebar = get_post(76); // insert ID of reels-sidebar here
 							// AUDIO
 							echo "<h3>".apply_filters( 'the_title', $current_sidebar->post_content )."</h3>";
 							echo apply_filters( 'the_content', $current_sidebar->post_content );
@@ -189,7 +189,7 @@
 				<?php
 
 					// get the Writings Page
-					$current_page = get_post(798); // insert ID of writings-page here
+					$current_page = get_post(81); // insert ID of writings-page here
 					echo "<h2>";
 					echo translate($current_page->post_title);
 					echo "</h2>"?>
