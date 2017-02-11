@@ -260,7 +260,7 @@ h3.subtitle {
 .secondary-navbar .current-menu-item a,
 .secondary-navbar [class*="active"] {
     color: #9848a8;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 

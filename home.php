@@ -210,12 +210,15 @@
 							 	<?php echo apply_filters( 'the_content', $writing_post->post_content ); ?>
 						 	</div>
 							<div class='entry-writing-image col-sm-5'>
+								<?php echo "<a target='_blank' href='" . get_post_meta($writing_post->ID, 'attachment-external-url', true) . "'>"?>
 								<?php $attachments = new Attachments( 'attachments', $writing_post->ID ); ?>
 								<?php if( $attachments->exist() ) : ?>
 									<?php while( $attachments->get() ) : ?>
 										<?php echo $attachments->image('')?>
 									<?php endwhile; ?>
 								<?php endif; ?>
+								<?php echo "</a>" ?>
+
 							</div>
 						</div>
 
