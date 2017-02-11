@@ -172,7 +172,7 @@
 							// get the Reels Sidebar
 							$current_sidebar = get_post(76); // insert ID of reels-sidebar here
 							// AUDIO
-							echo "<h3>".apply_filters( 'the_title', $current_sidebar->post_content )."</h3>";
+							echo "<h3>".apply_filters( 'the_title', $current_sidebar->post_title )."</h3>";
 							echo apply_filters( 'the_content', $current_sidebar->post_content );
 						?>
 					</div>
