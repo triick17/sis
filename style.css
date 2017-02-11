@@ -282,7 +282,7 @@ h3.subtitle {
 }
 
 .work-entry {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     margin-right: 16px;
 }
 
@@ -298,6 +298,7 @@ h3.subtitle {
 .divider {
 	min-height: calc(100vh - 135px);
     background: transparent;
+    margin: 32px 0;
 }
 
 #second-divider {
@@ -411,6 +412,10 @@ h3.subtitle {
         flex: 1 1 calc(25% - 16px);
         max-width: calc(25% - 16px);
     }
+    .divider {
+        margin: 128px 0;
+    }
+
 }
 
 @media only screen and (min-width:1140px) {
