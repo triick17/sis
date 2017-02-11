@@ -56,11 +56,11 @@
 						echo "<h3>" . translate($current_page->post_title)  . "</h3>";
 						?>
 
-						<div class="work-list xfoo">
+						<div class="work-list">
 						<?php
 
 							// The Loop (CV-Entries: Film)
-							$work_posts = get_posts( array("category_name" => "film") );
+							$work_posts = get_posts( array("category_name" => "film", 'numberposts'=>-1) );
 							foreach($work_posts as $work_post) {
 								echo "<div class='work-entry'>";
 							 	echo "<h4>" . $work_post->post_title . "</h4>";
@@ -76,12 +76,12 @@
 							echo "<h3>" . translate($current_page->post_title)  . "</h3>";
 						?>
 
-						<div class="row">
+						<div class="work-list">
 						<?php
 							// The Loop (CV-Entries: Theater)
-							$work_posts = get_posts( array("category_name" => "theatre") );
+							$work_posts = get_posts( array("category_name" => "theatre",'numberposts'=>-1) );
 							foreach($work_posts as $work_post) {
-								echo "<div class='work-entry col-xs-6 col-sm-4'>";
+								echo "<div class='work-entry'>";
 							 	echo "<h4>" . $work_post->post_title . "</h4>";
 							 	echo apply_filters( 'the_content', $work_post->post_content );
 								echo "</div>";
@@ -150,10 +150,10 @@
 					<div class="reels-wrapper col-md-9">
 						<div class="row">
 							<?php if(get_locale() == "en_US") {
-										$work_posts = get_posts( array("category_name" => "reel-en") );
+										$work_posts = get_posts( array("category_name" => "reel-en",'numberposts'=>-1) );
 									}
 									else {
-										$work_posts = get_posts( array("category_name" => "reel") );
+										$work_posts = get_posts( array("category_name" => "reel",'numberposts'=>-1) );
 									}
 
 								// get the Reels Page
@@ -199,7 +199,7 @@
 					echo "<div class='row'>";
 
 					// get the Writings Posts
-					$writing_posts = get_posts( array("category_name" => "writing") );
+					$writing_posts = get_posts( array("category_name" => "writing",'numberposts'=>-1) );
 					foreach($writing_posts as $writing_post) {
 						echo "<div class='entry-writing col-xs-6'>";
 					 	echo "<h3>" . apply_filters( 'the_title', $writing_post->post_title ) . "</h3>";
