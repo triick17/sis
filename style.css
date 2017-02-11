@@ -143,6 +143,8 @@ input:focus {
 
 .footer .menu-item {
 	list-style: none;
+    display: inline-block;
+    margin-right: 8px;
 }
 
 .footer  a {

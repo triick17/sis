@@ -1,31 +1,33 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
+				<a href="" id="footer" class="nav-anchor visuallyhidden">Footer</a>
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4">
+							<?php
+								// get the Footer (Page)
+								$sidebar = get_post(801); // insert ID of left Footer page
+								echo "<div class=''>" . apply_filters( 'the_content', $sidebar->post_content ) . "</div>";
+							?>
+						</div>
+						<div class="col-sm-4">
+
+						</div>
+						<div class="col-sm-4">
+							<?php
+								// get the Footer (Page)
+								$sidebar = get_post(804); // insert ID of right Footer page
+								echo "<div class=''>" . apply_filters( 'the_content', $sidebar->post_content ) . "</div>";
+							?>
 							<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-3')) ?>
 						</div>
-						<div class="col-sm-4">
-							<?php 
-								// get the Footer (Page)
-								$sidebar = get_post(143); // insert ID of left Footer page
-								echo "<div class=''>" . apply_filters( 'the_content', $sidebar->post_content ) . "</div>";
-							?>
-						</div>
-						<div class="col-sm-4">
-							<?php 
-								// get the Footer (Page)
-								$sidebar = get_post(244); // insert ID of right Footer page
-								echo "<div class=''>" . apply_filters( 'the_content', $sidebar->post_content ) . "</div>";
-							?>
-						</div>
 					</div>
-				
+
 					<!-- copyright -->
 					<p class="copyright">
 						&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
 					</p>
-				<!-- /copyright -->	
+				<!-- /copyright -->
 				</div>
 
 			</footer>
