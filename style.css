@@ -64,11 +64,11 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:#444;
+	color: #9848a8;
 	text-decoration:none;
 }
 a:hover {
-	color:#444;
+	color:#683172;
 }
 a:focus {
 	outline:0;
@@ -145,11 +145,11 @@ input:focus {
 	list-style: none;
 }
 
-.footer .menu-item a {
+.footer  a {
 	color: #9848a8;
 }
 
-.footer .menu-item a:hover {
+.footer a:hover {
 	color: #783984;
 	text-decoration: none;
 }
