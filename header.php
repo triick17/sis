@@ -5,13 +5,18 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9848a8">
+		<meta name="theme-color" content="#ffffff">
 
         <link href="<?php echo get_template_directory_uri(); ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="<?php echo get_template_directory_uri(); ?>/fonts/font-awesome.min.css" rel="stylesheet">
-        
+
 		<script src="<?php echo get_template_directory_uri(); ?>/jquery-3.1.1.min.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/lib/parallax.min.js" type="text/javascript"></script>
@@ -22,18 +27,18 @@
 
 
 
-		<?php 
+		<?php
 
 			wp_register_script( 'myscript', get_bloginfo("template_url") + "/script.js", $deps = array(), $ver = null );
-			wp_localize_script('myscript', 'WPURLS', array( 'siteurl' => get_option('siteurl'), 'templateurl' => get_bloginfo("template_url") )); 
+			wp_localize_script('myscript', 'WPURLS', array( 'siteurl' => get_option('siteurl'), 'templateurl' => get_bloginfo("template_url") ));
 			wp_enqueue_script( 'myscript' );?>
 
-	
+
 	<script type="text/javascript">
 			//var templateUrl = '<?= get_bloginfo("template_url"); ?>';
 		</script>
 
-		<script src="<?php echo get_template_directory_uri(); ?>/script.js"></script> 
+		<script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
 
 		<?php wp_head(); ?>
 		<script>
@@ -55,7 +60,7 @@
 			<!-- header -->
 			<header class="header clear container" role="banner">
 
-					<!-- logo 
+					<!-- logo
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
@@ -83,8 +88,7 @@
 					</nav>
 					<!-- /nav -->
 
-					
+
 
 			</header>
 			<!-- /header -->
-
