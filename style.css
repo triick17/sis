@@ -1,0 +1,602 @@
+/*
+	Theme Name: Sis
+	Theme URI: http://www.juliastipsits.com
+	Description: Julias Theme
+	Version: 1.1
+	Author: Patrick Stipsits
+	Author URI: http://www.julastipsits.com
+	Tags: Single Page
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+@font-face {
+    font-family: 'Museo';
+    src: url('fonts/Museo500-Regular-webfont.eot');
+    src: url('fonts/Museo500-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Museo500-Regular-webfont.woff2') format('woff2'),
+         url('fonts/Museo500-Regular-webfont.woff') format('woff'),
+         url('fonts/Museo500-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Museo500-Regular-webfont.svg#museo500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font:300 16px/1.5 "Fira Sans",'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#444;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+.visuallyhidden { 
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px; 
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, 
+.visuallyhidden.focusable:focus { 
+	clip: auto; 
+	height: auto; 
+	margin: 0; 
+	overflow: visible; 
+	position: static; 
+	width: auto; 
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	max-width:1280px;
+	width:95%;
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+
+}
+/* logo */
+.logo {
+
+}
+.logo-img {
+
+}
+/* nav */
+.nav {
+
+}
+/* sidebar */
+.sidebar {
+	margin-bottom: 30px;
+}
+
+/* footer */
+.footer {
+	padding-top: 30px;
+	background: #F1F1F1;
+}
+
+.footer .menu-item {
+	list-style: none;
+}
+
+.footer .menu-item a {
+	color: #9848a8;
+}
+
+.footer .menu-item a:hover {
+	color: #783984;	
+	text-decoration: none;
+}
+
+.footer .menu {
+	padding-left: 0;
+}
+
+.copyright {
+	margin-top: 24px;
+	font-size: 12px;
+}
+
+section > h2 {
+	margin-top: 72px;
+}
+
+section {
+	// border: 1px solid lightgreen;
+}
+
+section:nth-child(even) {
+	// background: lightgreen;
+}
+
+h2 {
+	text-align: center;
+	font-family: "Museo", sans-serif;
+	font-weight: 500;
+	font-size: 40px;
+	margin-bottom: 32px;
+}
+
+h3 {
+	font-family: "Museo", sans-serif;
+	font-weight: 500;
+}
+
+h3.subtitle {
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px;
+
+	font-size: 16px;
+	display: inline-block;
+	font-style: italic;
+}
+
+.navbar-default .navbar-brand {
+	font-family: "Museo", sans-serif;
+	font-weight: 500;
+}
+
+.nav-anchor {
+	margin-top: -150px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	font-size: 16px;
+	font-family: "Museo", sans-serif;
+	font-weight: 500;
+}
+
+.header-container {
+	position: relative;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    transition: box-shadow 500ms ease;
+}
+
+.secondary-navbar {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.secondary-navbar .menu-item {
+	// min-width: 30px;
+	margin-left: 10px;
+}
+
+.secondary-navbar .menu-item,
+.secondary-navbar .menu-item > a {
+	display: inline-block;
+}
+
+.secondary-navbar .menu-item > a > img{
+	display: none;
+}
+
+.secondary-navbar .sub-menu {
+	margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    display: inline-block
+}
+
+.secondary-navbar > .menu-item:first-child > a{
+	display: none;
+}
+
+.secondary-navbar .current-menu-item a,
+.secondary-navbar [class*="active"] {
+    color: #9848a8;
+}
+
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+.hero img {
+	width: 100%;
+	margin: 0;
+	height: auto;
+}
+
+.work-wrapper {
+	
+}	
+
+.entry-work {
+	// width: calc(25% - 15px);
+	// display: inline-block;
+	// vertical-align: top;
+	// margin-right: 15px;
+}
+
+.entry-work:nth-child(8),
+.entry-work:nth-child(4) {
+	margin-right: 0;
+}
+
+.work-wrapper
+
+.work-list {
+
+}
+
+.work-entry {
+	
+}
+
+.entry-writing {
+	// border: 1px solid tomato;
+}
+
+.entry-writing-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.divider {
+	min-height: calc(100vh - 135px);
+    background: transparent;
+}
+
+#second-divider {
+    background: transparent;
+}
+
+
+.reels-wrapper iframe {
+	max-width: 100%;
+}
+
+.sidebar-cv {
+	border-left: 3px solid #A718BE;
+}
+
+.sidebar-photos {
+	border-left: 3px solid #F7E93D;
+}
+
+.sidebar-reels {
+	border-left: 3px solid #E54343;
+}
+
+.border-writing {
+	border-right: 3px solid #8DD95A;
+}
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+
+/* Everything without mobile Navigation */
+@media only screen and (min-width:768px) {
+
+
+	/* Show Subtitle on Desktop */
+	h3.subtitle {
+		clip: initial;
+		height: auto;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		width: auto;
+
+		padding: initial;
+		bottom: 5px;
+		left: 30px;
+	}
+
+	main {
+		margin-top: 150px;
+	}
+
+	.navbar-header {
+		float: none;
+	}
+
+	.nav-anchor {
+		margin-top: -230px;
+	}
+
+	.navbar-default .navbar-brand {
+		// float: none;
+		font-size: 52px;
+		height: 85px;
+		line-height: inherit;
+		padding-bottom: 0;
+	}
+
+	.header-container {
+		box-shadow: none;
+	}
+
+}
+@media only screen and (min-width:1024px) {
+	
+	.navbar-right {
+    	// margin-top: 80px;
+	}
+}
+
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+/*
+	NextGen Gallery Style overrides
+*/
+.ngg-gallery-thumbnail-box {
+	display: none;
+}
+
+.ngg-gallery-thumbnail-box:first-child {
+	display: block;
+}
+
+.ngg-gallery-thumbnail a,
+.ngg-gallery-thumbnail {
+	border: none !important;
+	margin: 0 !important;
+}
+
+.gallery-title {
+	// font-size: 20px;
+	// color: #1B1B1B;	
+}
+
+
